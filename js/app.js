@@ -11,15 +11,13 @@ get_id_1[`style`][`color`] = `green`;
 
 //because this is an array I used a loop to go through and change each
 for (counter = 0; counter < all_p_tags.length; counter++) {
-    all_p_tags[counter][`outerText`] = `<p>CHANGED!</p>`;
+    all_p_tags[counter].innerText = `CHANGED!`;
 };
 
 //because this is an array I used a loop to go through and change each
 for (counter = 0; counter < class_1.length; counter++) {
-    class_1[counter].insertAdjacentHTML(`afterend`, `<p>new after</p>`);
+    class_1[counter].insertAdjacentHTML(`afterend`, `<p>new nested tag</p>`);
 };
 
 //using the variables to change the html on index.html
-get_id_2.insertAdjacentHTML(`beforebegin`, `<p>new before</p>`);
-
-
+get_id_2.insertAdjacentHTML(`beforebegin`, `<p>new tag before existing tag</p>`);
